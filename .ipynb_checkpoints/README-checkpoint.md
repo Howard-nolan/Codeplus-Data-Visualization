@@ -6,9 +6,7 @@
 This project was a part of the 2022 Duke University Code+ Program, a 10-week summer program designed for Duke University undergraduate students. The primary goal of this specific project, called Visualizations in Python, was to use state-of-the-art tools to develop interactive visualizations and workflows that would allow Duke researchers to analyze and visualize their large datasets in new and enhanced ways. The visualizations developed and documented for this project were created in JupyterLab notebooks hosted in a custom singularity. This singularity was then deployed on Duke’s OnDemand website, a virtual SLURM-based job scheduler using machines provided by the Duke Compute Cluster, in order to allow for a heavier use of computational resources.
 
 ### Our Researcher
-The researcher we worked with is Celine Robinson, pursuing a Ph.D in Civil and Environmental Engineering concentrating in Systems, Risk, and Decision. The research we focused on while working with her pertains specifically to the risk of above-ground petrochemical storage tanks spilling, and the potential effects of these spills on the communities nearby.  
-
-[ADD THAT SHE IS SPECIFICALLY INTERESTED IN CHILDREN AND ELDERLY]
+The researcher we worked with is Celine Robinson, pursuing a Ph.D in Civil and Environmental Engineering concentrating in Systems, Risk, and Decision. The research we focused on while working with her pertains specifically to the risk of above-ground petrochemical storage tanks spilling, and the potential effects of these spills on the communities nearby. She is specifically interested in understanding these impacts on communities dense with children or eldery people, a focus which guided our work. 
 
 ### About the Data
 This project works primarily with two datasets: the Above-Ground Storage Tanks (AST) dataset and the InfoUSA dataset. 
@@ -92,7 +90,7 @@ EPSG 4326 refers to a coordinate system within a database of coordinate system i
 
 The cuxfilter library, though, uses a world map background provided by OpenStreetMaps, which uses EPSG 3857 (a Spherical Mercator projection coordinate system). Therefore, every time we used the cuxfilter library to plot our points, we used the pyproj interface, which allows us to use the PROJ coordinate transformation software to transform our EPSG 4326 coordinates to EPSG 3857. 
 
-### Spatial joins: using .sjoin() to find the intersections between geometries
+### Spatial joins: using ```.sjoin()``` to find the intersections between geometries
 We took advantage of the GeoPandas library’s ```sjoin``` function to produce a few of our visualizations. This function performs a spatial join of two GeoDataFrames, and by setting the ‘predicate’ parameter to ‘intersects’, outputs a new GeoDataFrame which only includes the observations with geometries that are the intersections of the two original GeoDataFrames.
 
 This proved useful when classifying the tanks by county, for example, as we were only provided the geometries of each tank. When conducting a spatial join between this GeoDataFrame and another GeoDataFrame including geometries for each county across the US, we were able to identify which tanks belonged to each county. This was done by looping over each county in the counties GeoDataFrame, performing a spatial join with that geometry and the AST dataset to identify which tanks belonged to that county, and adding a column to the corresponding tank in the AST dataset indicating that county. This crucial added information on each tank allowed us to make the risk visualizations as detailed above. In addition, this logic also allowed us to count the number of households within five miles of a tank in each county, providing Celine with a way to identify which counties to focus her research on.
