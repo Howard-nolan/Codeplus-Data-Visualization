@@ -2,6 +2,8 @@
 
 # Authors: Alyssa Ting, Susan Feng, Joey Nolan
 
+![Example](/images/All_US_Gif_Vid_AdobeExpress.gif)
+
 ## Project Introduction 
 This project was a part of the 2022 Duke University Code+ Program, a 10-week summer program designed for Duke University undergraduate students. The primary goal of this specific project, called Visualizations in Python, was to use state-of-the-art tools to develop interactive visualizations and workflows that would allow Duke researchers to analyze and visualize their large datasets in new and enhanced ways. The visualizations developed and documented for this project were created in JupyterLab notebooks hosted in a custom singularity. This singularity was then deployed on Duke’s OnDemand website, a virtual SLURM-based job scheduler using machines provided by the Duke Compute Cluster, in order to allow for a heavier use of computational resources.
 
