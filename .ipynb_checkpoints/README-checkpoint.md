@@ -56,7 +56,7 @@ Make a flowchart :)))))) at the end!
 
 The source data we were provided were both significantly large, and required a lot of cleaning, processing and manipulation in order to create meaningful visualizations. We have numerous notebooks dedicated specifically to the processing and manipulations we did to each dataset for our visualizations, which you can look into for more detail. In general, however, we worked with file merging, data processing, transformation between different coordinate systems, nearest neighbor analysis, and spatial joins.  
 
-### File Merging: merging thousands of .txt files and writing the merged file as a ```.parquet``` file
+### File Merging: merging thousands of ```.txt``` files and writing the merged file as a ```.parquet``` file
 The InfoUSA dataset has household-level census data for 15 years, 2006 to 2020. Our work uses only the 2020 data. The 2020 data alone contains 38,248 ```.txt``` files, each file representing the census data per each household in one zipcode. However, in order to analyze and visualize this data meaningfully, we used the pyarrow engine and the .parquet file format in order to combine and store all this data in one, merged .parquet file.  
 
 Since each file had around a few thousand observations each and 54 columns, merging thousands of these files and storing them into a single ```.csv``` file quickly became tough on both processing power and memory usage– although we were able to merge all 38,248 files and write it as a ```.csv``` file, we weren’t able to read in that ```.csv``` file as it took up too much memory. 
