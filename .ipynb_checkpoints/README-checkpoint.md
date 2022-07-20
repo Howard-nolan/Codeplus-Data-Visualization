@@ -1,5 +1,5 @@
 # Visualization in Python for Duke Data Scientists
-[https://gitlab.oit.duke.edu/at341/codeplus-celine-dcc-package/-/tree/master/processing/README.md#test-readme-for-processing](https://gitlab.oit.duke.edu/at341/codeplus-celine-dcc-package/-/tree/master/processing/README.md)
+[link](https://gitlab.oit.duke.edu/at341/codeplus-celine-dcc-package/-/tree/master/processing/README.md)
 
 # Authors: Alyssa Ting, Susan Feng, Joey Nolan
 
