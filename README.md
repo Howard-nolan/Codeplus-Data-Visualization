@@ -17,7 +17,7 @@ This dataset was collected by Celine, and contains nearly 100 thousand observati
 [INSERT RANDOMLY SELECTED DATA]
 
 #### InfoUSA Dataset
-This dataset was purchased by Duke University, and contains household-level census data separated by household, totalling 200 million observations across around 38 thousand different files. For each household it has data on, this dataset contains information on the number of children, age code, estimated income, latitude and longitude coordinates, and more. The work we have done focuses primarily on the number of children per household and the head of household’s age code, as well as each households latitude and longitude coordinates. This dataset is private, but we’ve provided a synthetic version of the data below:
+This dataset was purchased by Duke University, and contains household-level census data separated by household, totalling 200 million observations across around 38 thousand different files. For each household it has data on, this dataset contains information on the number of children, age code, estimated income, latitude and longitude coordinates, and more. The work we have done focuses primarily on the number of children per household and the head of household’s age code, as well as each household’s latitude and longitude coordinates. This dataset is private, but we’ve provided a synthetic version of the data below:
 
 [INSERT SYNTHETIC DATA]
 
@@ -75,6 +75,9 @@ As we are working with a variety of spatial data, largely information on the lat
 We took advantage of the GeoPandas library’s ```.sjoin()``` function to produce a few of our visualizations. This function performs a spatial join of two GeoDataFrames, and by setting the ‘predicate’ parameter to ‘intersects’, outputs a new GeoDataFrame which only includes the observations with geometries that are the intersections of the two original GeoDataFrames.
 
 ## Visualizations
+
+To understand this process in more detail, view the visualizations README [here](https://gitlab.oit.duke.edu/at341/codeplus-celine-dcc-package/-/tree/master/visualizations/README.md), as well as each Jupyter Notebook.
+
 ### Stacked Bar Graph of Tank Types per State (HoloViews): using Pandas ```.groupby()```, ```.size()``` and ```.pivot_table()```
 This visualization uses the matplotlib backend in Holoviews to display information from the AST dataset. It outputs a stacked bar graph illustrating the exact breakdown of each tank type per state, as well as the number of tanks in each state. 
 
