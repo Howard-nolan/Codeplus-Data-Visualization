@@ -26,8 +26,7 @@ This dataset was made publicly available by the Federal Emergency Management Age
 
 [INSERT SCREENSHOT OF DATA]
 
-#### Floodplain Data, available [here](https://www.fema.gov/flood-maps/national-flood-hazard-layer
-).
+#### Floodplain Data, available [here](https://www.fema.gov/flood-maps/national-flood-hazard-layer).
 This dataset was made publicly available by FEMA, and contains information, including geometries, of over one million floodplains across the US. We specifically used the geometries provided to identify which tanks were on floodplains.
 
 [INSERT SCREENSHOT OF DATA]
