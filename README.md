@@ -51,7 +51,9 @@ We used a variety of Python libraries and packages to clean, process, manipulate
 #### Visualizations using Graphical-Processing Units (GPUs): Cuxfilter
 **Cuxfilter:** an open-source Python library, part of the RAPIDS suite of open-source software libraries built to work with data science on GPUs. This specific library seamlessly connects different visualization libraries such as bokeh and datashader to a GPU dataframe. We use this library to plot amounts of data orders of magnitudes larger than that we plot on HoloViews and GeoViews, all within seconds.
 
-## [Data Merging and Wrangling Workflow Overview](https://gitlab.oit.duke.edu/at341/codeplus-celine-dcc-package/-/tree/master/processing/README.md)
+## Data Merging and Wrangling Workflow Overview
+
+To understand this process in more detail, view the data manipulations README [here](https://gitlab.oit.duke.edu/at341/codeplus-celine-dcc-package/-/tree/master/processing/README.md).
 
 Make a flowchart :)))))) at the end!
 
