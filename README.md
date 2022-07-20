@@ -21,7 +21,7 @@ This dataset was purchased by Duke University, and contains household-level cens
 
 [INSERT SYNTHETIC DATA]
 
-#### National Risk Index Data, available at [here](https://hazards.fema.gov/nri/data-resources).
+#### National Risk Index Data, available [here](https://hazards.fema.gov/nri/data-resources).
 This dataset was made publicly available by the Federal Emergency Management Agency (FEMA), and contains extensive information on natural hazards risks for each county across the country. The columns we were specifically interested in were the ones with Risk Index Score values for each county. The Risk Index Score is on a scale from 0 to 100, and was calculated by FEMA and indicates the relative risk of that county for a specific natural hazard. The natural hazards deemed relevant to our project by our researcher were tornadoes, hurricanes, strong winds, coastal floods, riverine floods, and earthquakes.
 
 [INSERT SCREENSHOT OF DATA]
