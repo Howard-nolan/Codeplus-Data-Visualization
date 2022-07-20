@@ -9,7 +9,7 @@ This project was a part of the 2022 Duke University Code+ Program, a 10-week sum
 The researcher we worked with is Celine Robinson, pursuing a Ph.D in Civil and Environmental Engineering concentrating in Systems, Risk, and Decision. The research we focused on while working with her pertains specifically to the risk of above-ground petrochemical storage tanks spilling, and the potential effects of these spills on the communities nearby. She is specifically interested in understanding these impacts on communities dense with children or eldery people, a focus which guided our work. 
 
 ### About the Data
-This project works primarily with two datasets: the Above-Ground Storage Tanks (AST) dataset and the InfoUSA dataset. 
+This project works primarily with two datasets: the Above-Ground Storage Tanks (AST) dataset and the InfoUSA dataset, both provided to us by our researcher. In addition, we pulled government-owned natural hazard data to supplement our work. 
 
 #### AST Dataset
 This dataset was collected by Celine, and contains nearly 100 thousand observations on petrochemical storage tanks across the United States. The data includes information such as the type of storage tank, diameter, and precise latitude and longitude coordinates for each storage tank. The full dataset is not available to the public, but we’ve provided a random sampling of it below: 
