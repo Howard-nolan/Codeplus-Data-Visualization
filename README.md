@@ -3,6 +3,8 @@
 # Authors: Alyssa Ting, Susan Feng, Joey Nolan
 
 ![Example](/images/All_US_Gif_Vid_AdobeExpress.gif)
+![Example](/images/charleston_case_study.gif)
+
 For more example visualizations, see the Visualizations section below.
 
 ## Project Introduction 
