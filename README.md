@@ -90,7 +90,7 @@ To understand this process in more detail, view the visualizations README [here]
 ### Stacked Bar Graph of Tank Types per State (HoloViews): using Pandas ```.groupby()```, ```.size()``` and ```.pivot_table()```
 This visualization uses the matplotlib backend in Holoviews to display information from the AST dataset. It outputs a stacked bar graph illustrating the exact breakdown of each tank type per state, as well as the number of tanks in each state. 
 
-![Example](/images/stacked_bar.png)
+![Example](/images/stacked_bar.PNG)
 
 ### Number of Children Per County (GeoViews): using pandas ```.groupby()``` and ```.sum()```
 This visualization uses the GeoViews library to display a map of the US, broken down at the county-level with each county colored by its total number of children, as processed from the InfoUSA dataset. It also uses the AST dataset to plot points overlay points for each storage tank on top of this map.
