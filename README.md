@@ -1,6 +1,6 @@
 # Visualization in Python for Duke Data Scientists
 
-![Example](/images/09_all_us_distances.gif)
+![Example](/images/10_all_us_distances.gif)
 ![Example](/images/13_webapp_2.gif)
 
 ### Authors: Alyssa Ting, Susan Feng, Joey Nolan
