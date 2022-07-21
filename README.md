@@ -5,7 +5,7 @@
 
 ### Authors: Alyssa Ting, Susan Feng, Joey Nolan
 #### About the Authors:
-**Alyssa:** a rising second-year Duke student from São Paulo, Brazil. She is interested in studying both Computer Science and Statistical Sciences and hopes to work in Data Science in the future– Sports Analytics would be her dream career. At Duke, she’s the Sports Photography Editor for The Chronicle, is active in the Duke Sports Analytics Club, and will be a Computer Science 101 and Math 111L/112L Teaching Assistant next fall. 
+**Alyssa:** a rising second-year Duke student from São Paulo, Brazil. She is interested in studying both Computer Science and Statistical Sciences and hopes to work in Data Science in the future.
 
 **Susan:**
 
