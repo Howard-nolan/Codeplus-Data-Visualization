@@ -121,7 +121,7 @@ This visualization is similar to the ones described above, but in addition to al
 ### Address Lookup Web App (Folium): interactive Web App for real-time searching and display of select points
 This interactive Web App uses the data processing workflows explained in detail above to create a visualization displaying the ten nearest tanks to any address the user inputs into a search bar.
 
-![Example](/images/web_app.gif)
+![Example](/images/webapp.gif)
 
 ## User Instructions
 ### Step 1: Setup environment for project in the Duke Compute Cluster
