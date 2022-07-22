@@ -1,13 +1,13 @@
 # Visualization in Python for Duke Data Scientists
 
-![Example](/images/06_all_us_distances.gif)
+![Example](/images/06_all_us_dist.gif)
 ![Example](/images/webapp_2.gif)
 
 ### Authors: Alyssa Ting, Susan Feng, Joey Nolan
 #### About the Authors:
 **Alyssa:** a rising second-year Duke student from São Paulo, Brazil. She is interested in studying both Computer Science and Statistical Sciences and hopes to work in Data Science in the future.
 
-**Susan:**
+**Susan:** 
 
 **Joey:**
 
@@ -97,33 +97,33 @@ This visualization uses the matplotlib backend in Holoviews to display informati
 ### Number of Children Per County (GeoViews): using pandas ```.groupby()``` and ```.sum()```
 This visualization uses the GeoViews library to display a map of the US, broken down at the county-level with each county colored by its total number of children, as processed from the InfoUSA dataset. It also uses the AST dataset to plot points overlay points for each storage tank on top of this map.
 
-![Example](/images/02_children_county.gif)
+![Example](/images/02_children_per_county.gif)
 
 ### Number of Households Near Tanks per County (GeoViews): using GeoPandas ```.sjoin()```
 This map of the US was created using GeoViews, and displays each county colored by the number of households in that county that are within five miles from a tank (a boundary provided to us by our researcher). 
 
-![Example](/images/03_hh_count_county.gif)
+![Example](/images/hh_per_county.gif)
 
 ### Charleston and Harris County Case Studies (Cuxfilter): interactive visualizations using GPUs
 These two visualizations were created using the Cuxfilter library, which allows users to plot a large amount of data to create customizable and interactive dashboards using GPUs. Each visualization displays points for all households and tanks in that county, then allows the user to customize which points they would like to see: depending on distance from the nearest tank, as well as whether or not the household has elderly people or children. 
 
-![Example](/images/04_charleston_case_study.gif)
-![Example](/images/05_harris_case_study.gif)
+![Example](/images/04_charleston_dist.gif)
+![Example](/images/05_harris_dist.gif)
 
 ### All US Households Colored by Distance to Nearest Tank (Cuxfilter): interactive visualizations using GPUs
 This visualization is very similar to the ones described above, but it instead plots all US households with children, coloring the points by their distances to nearest tanks. It was created using the pre-processed data as well, in addition to the Cuxfilter library and GPUs, but this time with a number of observations orders of magnitude larger than used for the case studies. 
 
-![Example](/images/06_all_us_distances.gif)
+![Example](/images/06_all_us_dist.gif)
 
 ### All US Households with Natural Hazard Sliders (Cuxfilter): interactive visualizations using GPUs
 This visualization is similar to the ones described above, but in addition to allowing the user to select to view households within a certain distance from tanks, the user can also choose to view households within a certain national risk index for each relevant natural hazard (tornadoes, hurricanes, strong winds, coastal floods, riverine floods, and earthquakes).
 
-![Example](/images/07_nat_hazards.gif)
+![Example](/images/07_natural_hazards.gif)
 
 ### Address Lookup Web App (Folium): interactive Web App for real-time searching and display of select points
 This interactive Web App uses the data processing workflows explained in detail above to create a visualization displaying the ten nearest tanks to any address the user inputs into a search bar.
 
-![Example](/images/14_webapp.gif)
+![Example](/images/08_webapp.gif)
 
 ## User Instructions
 ### Step 1: Setup environment for project in the Duke Compute Cluster
