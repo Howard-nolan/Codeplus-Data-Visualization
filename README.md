@@ -21,7 +21,7 @@ The researcher we worked with is Celine Robinson, pursuing a Ph.D in Civil and E
 This project works primarily with two datasets: the Above-Ground Storage Tanks (AST) dataset and the InfoUSA dataset, both provided to us by our researcher. In addition, we pulled government-owned natural hazard data to supplement our work. 
 
 <p align="center">
-    <img src="/images/flowchart.png#center" alt="flowchart" width="400">
+    <img src="/images/flowchart.png" alt="flowchart" width="400">
 </p>
 
 #### AST Dataset
