@@ -1,7 +1,7 @@
 # Visualization in Python for Duke Data Scientists
 
-![Example](/images/10_all_us_distances.gif)
-![Example](/images/13_webapp_2.gif)
+![Example](/images/06_all_us_distances.gif)
+![Example](/images/webapp_2.gif)
 
 ### Authors: Alyssa Ting, Susan Feng, Joey Nolan
 #### About the Authors:
@@ -27,7 +27,7 @@ This project works primarily with two datasets: the Above-Ground Storage Tanks (
 #### AST Dataset
 This dataset was collected by Celine, and contains nearly 100 thousand observations on petrochemical storage tanks across the United States. The data includes information such as the type of storage tank, diameter, and precise latitude and longitude coordinates for each storage tank. The full dataset is not available to the public, but we’ve provided a random sampling of it below: 
 
-![Example](/images/01_synthetic_ast.PNG)
+![Example](/images/synthetic_ast.png)
 
 #### InfoUSA Dataset
 This dataset was purchased by Duke University, and contains household-level census data separated by household, totalling 200 million observations across around 38 thousand different files. For each household it has data on, this dataset contains information on the number of children, age code, estimated income, latitude and longitude coordinates, and more. The work we have done focuses primarily on the number of children per household and the head of household’s age code, as well as each household’s latitude and longitude coordinates. This dataset is private, but we’ve provided a synthetic version of the data below:
@@ -37,12 +37,12 @@ This dataset was purchased by Duke University, and contains household-level cens
 #### National Risk Index Data, available [here](https://hazards.fema.gov/nri/data-resources).
 This dataset was made publicly available by the Federal Emergency Management Agency (FEMA), and contains extensive information on natural hazards risks for each county across the country. The columns we were specifically interested in were the ones with Risk Index Score values for each county. The Risk Index Score is on a scale from 0 to 100, and was calculated by FEMA and indicates the relative risk of that county for a specific natural hazard. The natural hazards deemed relevant to our project by our researcher were tornadoes, hurricanes, strong winds, coastal floods, riverine floods, and earthquakes.
 
-![Example](/images/03_nri_data.PNG)
+![Example](/images/nri_data.png)
 
 #### Floodplain Data, available [here](https://www.fema.gov/flood-maps/national-flood-hazard-layer).
 This dataset was made publicly available by FEMA, and contains information, including geometries, of over one million floodplains across the US. We specifically used the geometries provided to identify which tanks were on floodplains.
 
-![Example](/images/04_floodplain_data.PNG)
+![Example](/images/floodplain_data.png)
 
 ### Tools
 We used a variety of Python libraries and packages to clean, process, manipulate and visualization datasets with thousands to millions of observations.
@@ -89,43 +89,43 @@ We took advantage of the GeoPandas library’s ```.sjoin()``` function to produc
 
 ## Visualizations
 
-To understand this process in more detail, view the visualizations README [here](https://gitlab.oit.duke.edu/at341/codeplus-celine-dcc-package/-/tree/master/visualizations/README.md), as well as each Jupyter Notebook.
+**To understand this process in more detail, view the visualizations README [here](https://gitlab.oit.duke.edu/at341/codeplus-celine-dcc-package/-/tree/master/visualizations/README.md), as well as each Jupyter Notebook.**
 
 ### Stacked Bar Graph of Tank Types per State (HoloViews): using Pandas ```.groupby()```, ```.size()``` and ```.pivot_table()```
 This visualization uses the matplotlib backend in Holoviews to display information from the AST dataset. It outputs a stacked bar graph illustrating the exact breakdown of each tank type per state, as well as the number of tanks in each state. 
 
-![Example](/images/05_stacked_bar.PNG)
+![Example](/images/01_stacked_bar.PNG)
 
 ### Number of Children Per County (GeoViews): using pandas ```.groupby()``` and ```.sum()```
 This visualization uses the GeoViews library to display a map of the US, broken down at the county-level with each county colored by its total number of children, as processed from the InfoUSA dataset. It also uses the AST dataset to plot points overlay points for each storage tank on top of this map.
 
-![Example](/images/06_children_county.gif)
+![Example](/images/02_children_county.gif)
 
 ### Number of Households Near Tanks per County (GeoViews): using GeoPandas ```.sjoin()```
 This map of the US was created using GeoViews, and displays each county colored by the number of households in that county that are within five miles from a tank (a boundary provided to us by our researcher). 
 
-![Example](/images/07_hh_count_county.gif)
+![Example](/images/03_hh_count_county.gif)
 
 ### Charleston and Harris County Case Studies (Cuxfilter): interactive visualizations using GPUs
 These two visualizations were created using the Cuxfilter library, which allows users to plot a large amount of data to create customizable and interactive dashboards using GPUs. Each visualization displays points for all households and tanks in that county, then allows the user to customize which points they would like to see: depending on distance from the nearest tank, as well as whether or not the household has elderly people or children. 
 
-![Example](/images/08_charleston_case_study.gif)
-![Example](/images/09_harris_case_study.gif)
+![Example](/images/04_charleston_case_study.gif)
+![Example](/images/05_harris_case_study.gif)
 
 ### All US Households Colored by Distance to Nearest Tank (Cuxfilter): interactive visualizations using GPUs
 This visualization is very similar to the ones described above, but it instead plots all US households with children, coloring the points by their distances to nearest tanks. It was created using the pre-processed data as well, in addition to the Cuxfilter library and GPUs, but this time with a number of observations orders of magnitude larger than used for the case studies. 
 
-![Example](/images/10_all_us_distances.gif)
+![Example](/images/06_all_us_distances.gif)
 
 ### All US Households with Natural Hazard Sliders (Cuxfilter): interactive visualizations using GPUs
 This visualization is similar to the ones described above, but in addition to allowing the user to select to view households within a certain distance from tanks, the user can also choose to view households within a certain national risk index for each relevant natural hazard (tornadoes, hurricanes, strong winds, coastal floods, riverine floods, and earthquakes).
 
-![Example](/images/11_coastal_flooding.gif)
+![Example](/images/07_nat_hazards.gif)
 
 ### Address Lookup Web App (Folium): interactive Web App for real-time searching and display of select points
 This interactive Web App uses the data processing workflows explained in detail above to create a visualization displaying the ten nearest tanks to any address the user inputs into a search bar.
 
-![Example](/images/12_webapp.gif)
+![Example](/images/14_webapp.gif)
 
 ## User Instructions
 ### Step 1: Setup environment for project in the Duke Compute Cluster

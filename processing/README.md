@@ -3,7 +3,7 @@
 # Authors: Alyssa Ting, Susan Feng, Joey Nolan
 
 ## Data Cleaning and Processing
-Make a flowchart :)))))) at the end!
+<img src="/images/flowchart.png" alt="flowchart" width="500"/>
 
 ### File Merging: merging thousands of ```.txt``` files and writing the merged file as a ```.parquet``` file
 The InfoUSA dataset has household-level census data for 15 years, 2006 to 2020. Our work uses only the 2020 data. The 2020 data alone contains 38,248 ```.txt``` files, each file representing the census data per each household in one zip code. However, in order to analyze and visualize this data meaningfully, we used the ```pyarrow``` engine and the ```.parquet``` file format in order to combine and store all this data in one, merged ```.parquet``` file.  
