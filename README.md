@@ -24,10 +24,6 @@ This project works primarily with two datasets: the Above-Ground Storage Tanks (
     <img src="/images/flowchart.png" alt="flowchart" width="400">
 </p>
 
-<p align="center">
-<img src="/images/flowchart.png" width = "500" height = "900">
-</p>
-
 #### AST Dataset
 This dataset was collected by Celine, and contains nearly 100 thousand observations on petrochemical storage tanks across the United States. The data includes information such as the type of storage tank, diameter, and precise latitude and longitude coordinates for each storage tank. The full dataset is not available to the public, but we’ve provided a random sampling of it below: 
 
