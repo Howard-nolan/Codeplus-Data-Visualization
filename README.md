@@ -20,7 +20,9 @@ The researcher we worked with is Celine Robinson, pursuing a Ph.D in Civil and E
 ### About the Data
 This project works primarily with two datasets: the Above-Ground Storage Tanks (AST) dataset and the InfoUSA dataset, both provided to us by our researcher. In addition, we pulled government-owned natural hazard data to supplement our work. 
 
-<img src="/images/flowchart.png#center" alt="flowchart" width="400"/>
+<p align="center">
+    <img src="/images/flowchart.png#center" alt="flowchart" width="400"/>
+p>
 
 #### AST Dataset
 This dataset was collected by Celine, and contains nearly 100 thousand observations on petrochemical storage tanks across the United States. The data includes information such as the type of storage tank, diameter, and precise latitude and longitude coordinates for each storage tank. The full dataset is not available to the public, but we’ve provided a random sampling of it below: 
