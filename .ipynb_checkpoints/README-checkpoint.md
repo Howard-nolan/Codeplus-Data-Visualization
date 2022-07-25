@@ -1,11 +1,15 @@
 # Visualization in Python for Duke Data Scientists
 
-# Authors: Alyssa Ting, Susan Feng, Joey Nolan
+![Example](/images/06_all_us_dist.gif)
+![Example](/images/webapp_2.gif)
 
-![Example](/images/all_us_distances.gif)
-![Example](/images/charleston_case_study.gif)
+### Authors: Alyssa Ting, Susan Feng, Joey Nolan
+#### About the Authors:
+**Alyssa:** a rising second-year Duke student from São Paulo, Brazil. She is interested in studying both Computer Science and Statistical Sciences and hopes to work in Data Science in the future.
 
-For more example visualizations, see the Visualizations section below.
+**Susan:** 
+
+**Joey:**
 
 ## Project Introduction 
 This project was a part of the 2022 Duke University Code+ Program, a 10-week summer program designed for Duke University undergraduate students. The primary goal of this specific project, called Visualizations in Python, was to use state-of-the-art tools to develop interactive visualizations and workflows that would allow Duke researchers to analyze and visualize their large datasets in new and enhanced ways. The visualizations developed and documented for this project were created in JupyterLab notebooks hosted in a custom singularity. This singularity was then deployed on Duke’s OnDemand website, a virtual SLURM-based job scheduler using machines provided by the Duke Compute Cluster, in order to allow for a heavier use of computational resources.
@@ -19,7 +23,7 @@ This project works primarily with two datasets: the Above-Ground Storage Tanks (
 #### AST Dataset
 This dataset was collected by Celine, and contains nearly 100 thousand observations on petrochemical storage tanks across the United States. The data includes information such as the type of storage tank, diameter, and precise latitude and longitude coordinates for each storage tank. The full dataset is not available to the public, but we’ve provided a random sampling of it below: 
 
-[INSERT RANDOMLY SELECTED DATA]
+![Example](/images/synthetic_ast.png)
 
 #### InfoUSA Dataset
 This dataset was purchased by Duke University, and contains household-level census data separated by household, totalling 200 million observations across around 38 thousand different files. For each household it has data on, this dataset contains information on the number of children, age code, estimated income, latitude and longitude coordinates, and more. The work we have done focuses primarily on the number of children per household and the head of household’s age code, as well as each household’s latitude and longitude coordinates. This dataset is private, but we’ve provided a synthetic version of the data below:
@@ -29,12 +33,12 @@ This dataset was purchased by Duke University, and contains household-level cens
 #### National Risk Index Data, available [here](https://hazards.fema.gov/nri/data-resources).
 This dataset was made publicly available by the Federal Emergency Management Agency (FEMA), and contains extensive information on natural hazards risks for each county across the country. The columns we were specifically interested in were the ones with Risk Index Score values for each county. The Risk Index Score is on a scale from 0 to 100, and was calculated by FEMA and indicates the relative risk of that county for a specific natural hazard. The natural hazards deemed relevant to our project by our researcher were tornadoes, hurricanes, strong winds, coastal floods, riverine floods, and earthquakes.
 
-[INSERT SCREENSHOT OF DATA]
+![Example](/images/nri_data.png)
 
 #### Floodplain Data, available [here](https://www.fema.gov/flood-maps/national-flood-hazard-layer).
 This dataset was made publicly available by FEMA, and contains information, including geometries, of over one million floodplains across the US. We specifically used the geometries provided to identify which tanks were on floodplains.
 
-[INSERT SCREENSHOT OF DATA]
+![Example](/images/floodplain_data.png)
 
 ### Tools
 We used a variety of Python libraries and packages to clean, process, manipulate and visualization datasets with thousands to millions of observations.
@@ -57,9 +61,11 @@ We used a variety of Python libraries and packages to clean, process, manipulate
 **Cuxfilter:** an open-source Python library, part of the RAPIDS suite of open-source software libraries built to work with data science on GPUs. This specific library seamlessly connects different visualization libraries such as bokeh and datashader to a GPU dataframe. We use this library to plot amounts of data orders of magnitudes larger than that we plot on HoloViews and GeoViews, all within seconds.
 
 ## Data Merging and Wrangling Workflow Overview
-Make a flowchart :)))))) at the end!
+**To understand this process in more detail, view the data manipulations README [here](https://gitlab.oit.duke.edu/at341/codeplus-celine-dcc-package/-/tree/master/processing/README.md).**
 
-To understand this process in more detail, view the data manipulations README [here](https://gitlab.oit.duke.edu/at341/codeplus-celine-dcc-package/-/tree/master/processing/README.md).
+<p align="center">
+    <img src="/images/flowchart.png" alt="flowchart" width="400">
+</p>
 
 The source data we were provided were both significantly large, and required a lot of cleaning, processing and manipulation in order to create meaningful visualizations. We have numerous notebooks dedicated specifically to the processing and manipulations we did to each dataset for our visualizations, which you can look into for more detail. In general, however, we worked with file merging, data processing, transformation between different coordinate systems, nearest neighbor analysis, and spatial joins.  
 
@@ -81,42 +87,43 @@ We took advantage of the GeoPandas library’s ```.sjoin()``` function to produc
 
 ## Visualizations
 
-To understand this process in more detail, view the visualizations README [here](https://gitlab.oit.duke.edu/at341/codeplus-celine-dcc-package/-/tree/master/visualizations/README.md), as well as each Jupyter Notebook.
+**To understand this process in more detail, view the visualizations README [here](https://gitlab.oit.duke.edu/at341/codeplus-celine-dcc-package/-/tree/master/visualizations/README.md), as well as each Jupyter Notebook.**
 
 ### Stacked Bar Graph of Tank Types per State (HoloViews): using Pandas ```.groupby()```, ```.size()``` and ```.pivot_table()```
 This visualization uses the matplotlib backend in Holoviews to display information from the AST dataset. It outputs a stacked bar graph illustrating the exact breakdown of each tank type per state, as well as the number of tanks in each state. 
 
-[INSERT GIF]
+![Example](/images/01_stacked_bar.png)
 
 ### Number of Children Per County (GeoViews): using pandas ```.groupby()``` and ```.sum()```
 This visualization uses the GeoViews library to display a map of the US, broken down at the county-level with each county colored by its total number of children, as processed from the InfoUSA dataset. It also uses the AST dataset to plot points overlay points for each storage tank on top of this map.
 
-[INSERT GIF]
+![Example](/images/02_children_per_county.gif)
 
 ### Number of Households Near Tanks per County (GeoViews): using GeoPandas ```.sjoin()```
 This map of the US was created using GeoViews, and displays each county colored by the number of households in that county that are within five miles from a tank (a boundary provided to us by our researcher). 
 
-[INSERT GIF]
+![Example](/images/hh_per_county.gif)
 
 ### Charleston and Harris County Case Studies (Cuxfilter): interactive visualizations using GPUs
 These two visualizations were created using the Cuxfilter library, which allows users to plot a large amount of data to create customizable and interactive dashboards using GPUs. Each visualization displays points for all households and tanks in that county, then allows the user to customize which points they would like to see: depending on distance from the nearest tank, as well as whether or not the household has elderly people or children. 
 
-[INSERT GIF]
+![Example](/images/04_charleston_dist.gif)
+![Example](/images/05_harris_dist.gif)
 
 ### All US Households Colored by Distance to Nearest Tank (Cuxfilter): interactive visualizations using GPUs
 This visualization is very similar to the ones described above, but it instead plots all US households with children, coloring the points by their distances to nearest tanks. It was created using the pre-processed data as well, in addition to the Cuxfilter library and GPUs, but this time with a number of observations orders of magnitude larger than used for the case studies. 
 
-[INSERT GIF]
+![Example](/images/06_all_us_dist.gif)
 
 ### All US Households with Natural Hazard Sliders (Cuxfilter): interactive visualizations using GPUs
 This visualization is similar to the ones described above, but in addition to allowing the user to select to view households within a certain distance from tanks, the user can also choose to view households within a certain national risk index for each relevant natural hazard (tornadoes, hurricanes, strong winds, coastal floods, riverine floods, and earthquakes).
 
-[INSERT GIF]
+![Example](/images/07_natural_hazards.gif)
 
 ### Address Lookup Web App (Folium): interactive Web App for real-time searching and display of select points
 This interactive Web App uses the data processing workflows explained in detail above to create a visualization displaying the ten nearest tanks to any address the user inputs into a search bar.
 
-[INSERT GIF]
+![Example](/images/08_webapp.gif)
 
 ## User Instructions
 ### Step 1: Setup environment for project in the Duke Compute Cluster

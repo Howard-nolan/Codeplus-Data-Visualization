@@ -9,30 +9,45 @@ This visualization uses the matplotlib backend in Holoviews to display informati
 
 To create it, we used various different functions to manipulate the AST data as a Pandas dataframe. First, the ```.groupby()``` function groups the data by state as well as tank type, then the ```.size()``` function returns the number of each group– in this case, the number of each type of tank in each state. Using these functions consecutively returns a new dataframe listing the state, the tank type, and the number of that type of tank in that state. This dataframe is then converted to a pivot table using the ```.pivot_table()``` function, where the columns are tank types and the rows are states. The horizontal bar chart function in matplotlib, with parameter ‘stacked’ set to True, outputs the stacked bar graph visualization. 
 
+![Example](/images/01_stacked_bar.png)
+
 ### Number of Children Per County (GeoViews): using pandas ```.groupby()``` and ```.sum()```
 This visualization uses the GeoViews library to display a map of the US, broken down at the county-level with each county colored by its total number of children, as processed from the InfoUSA dataset. It also uses the AST dataset to plot points overlay points for each storage tank on top of this map.
 
 To create it, we used pre-processed InfoUSA data that has the number of children in each zip code. Using the pandas groupby function as above, we group this data by county and use the sum function to sum the number of children for all zip codes in a county, thus creating a dataframe with each county and the total number of children for that county. We then merged this dataframe with another dataframe we pulled from the US government’s cartographic files database, which provides geometries for each county. Combining these two dataframes allows us to plot this data spatially, mapping all counties to form a map of the US and coloring it by the number of children in that county. We then converted the latitude and longitude coordinates of each tank to Point geometries, and plotted those in a similar fashion, then used GeoViews’ ```*``` operator to overlay the two visualizations. 
+
+![Example](/images/02_children_per_county.gif)
 
 ### Number of Households Near Tanks per County (GeoViews): using GeoPandas ```.sjoin()```
 This map of the US was created using GeoViews, and displays each county colored by the number of households in that county that are within five miles from a tank (a boundary provided to us by our researcher). 
 
 To find the number of counties within five miles of a tank for each county, we used the GeoPandas’ ```.sjoin()``` function. This function, as detailed in the Data Merging and Wrangling Workflow Overview, can be used to find the intersection between two spatial dataframes. Using a pre-processed dataset including distances from each household to the tank nearest to it, we filtered to only keep the households within five miles of a tank. Then, we looped over a dataframe with geometries for each county, provided by the US government’s cartographic files database, to identify which tanks were in each county, and included the length of that dataframe using the len function as a new column in the counties GeoDataFrame. The final output was a GeoDataFrame with each county, the number of households within five miles of a tank in that county, and that county’s geometry. This is the dataframe used in GeoViews to plot the visualization below. 
 
+![Example](/images/03_hh_per_county.gif)
+
 ### Charleston and Harris County Case Studies (Cuxfilter): interactive visualizations using GPUs
 These two visualizations were created using the Cuxfilter library, which allows users to plot a large amount of data to create customizable and interactive dashboards using GPUs. Each visualization displays points for all households and tanks in that county, then allows the user to customize which points they would like to see: depending on distance from the nearest tank, as well as whether or not the household has elderly people or children. 
 This visualization was created with pre-processed InfoUSA and AST data as detailed in the  Data Merging and Wrangling Workflow Overview. The dataframe includes coordinates for each point in the EPSG 3857 projection, whether or not the household has children or elderly people in it, and the distance from that household to the nearest tank. We then use the features of the Cuxfilter library to specify which tools and variables to allow the users to interact with. 
 
+![Example](/images/04_charleston_dist.gif)
+![Example](/images/05_harris_dist.gif)
+
 ### All US Households Colored by Distance to Nearest Tank (Cuxfilter): interactive visualizations using GPUs
 This visualization is very similar to the ones described above, but it instead plots all US households with children, coloring the points by their distances to nearest tanks. It was created using the pre-processed data as well, in addition to the Cuxfilter library and GPUs, but this time with a number of observations orders of magnitude larger than used for the case studies. 
 
+![Example](/images/06_all_us_dist.gif)
+
 ### All US Households with Natural Hazard Sliders (Cuxfilter): interactive visualizations using GPUs
 This visualization is similar to the ones described above, but in addition to allowing the user to select to view households within a certain distance from tanks, the user can also choose to view households within a certain national risk index for each relevant natural hazard (tornadoes, hurricanes, strong winds, coastal floods, riverine floods, and earthquakes). It is created with the Cuxfilter library. 
+
+![Example](/images/07_natural_hazards.gif)
 
 ### Address Lookup Web App (Folium): interactive Web App for real-time searching and display of select points
 This interactive Web App uses the data processing workflows explained in detail above to create a visualization displaying the ten nearest tanks to any address the user inputs into a search bar.
 
 It uses geocoding through the OpenStreetMap and GoogleMaps Application Programming Interfaces (APIs) to convert the address inputted by the user into latitude and longitude coordinates, then finds the ten storage tanks nearest to that address and calculates the distance to the nearest one. In addition, it displays a “Risk Index”, an indicator that uses information of that address’ proximity to a tank and the physical vulnerability of that tank to inform the user with an estimate of the risk of experiencing a tank spill at that specific address.
+
+![Example](/images/08_webapp.gif)
 
 ## User Instructions
 ### Step 1: Setup environment for project in the Duke Compute Cluster
