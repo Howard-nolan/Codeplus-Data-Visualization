@@ -1,6 +1,6 @@
 # Petrochemical Risk Finder
 
-![Example](/risk-index-web-app/images_files/Web_Demo.gif)
+![Example](/risk-index-web-app/image_files/Web_Demo.gif)
 
 ## Objective
 The Petrochemical Risk Finder is a web application developed to give users a sense of their risk of petrochemical contamination. 
