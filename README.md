@@ -9,7 +9,7 @@
 
 **[Susan](https://www.linkedin.com/in/susan-feng-494989214/):** a rising sophomore at Duke from the Bay Area, California. She is interested in studying Computer Science and Finance and is excited to explore various paths in CS.
 
-**Joey:** a rising Junior at Duke from Austin, Texas majoring in Computer Science and Economics.
+**[Joey](https://www.linkedin.com/in/howard-nolan/):** a rising Junior at Duke from Austin, Texas majoring in Computer Science and Economics. He is interested in using the application of data to solve tangible problems
 
 ## Project Introduction 
 This project was a part of the 2022 Duke University Code+ Program, a 10-week summer program designed for Duke University undergraduate students. The primary goal of this specific project, called Visualizations in Python, was to use state-of-the-art tools to develop interactive visualizations and workflows that would allow Duke researchers to analyze and visualize their large datasets in new and enhanced ways. The visualizations developed and documented for this project were created in JupyterLab notebooks hosted in a custom singularity. This singularity was then deployed on Duke’s OnDemand website, a virtual SLURM-based job scheduler using machines provided by the Duke Compute Cluster, in order to allow for a heavier use of computational resources.
