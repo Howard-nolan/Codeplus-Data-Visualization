@@ -5,11 +5,11 @@
 
 ### Authors: Alyssa Ting, Susan Feng, Joey Nolan
 #### About the Authors:
-**Alyssa:** a rising second-year Duke student from São Paulo, Brazil. She is interested in studying both Computer Science and Statistical Sciences and hopes to work in Data Science in the future.
+**[Alyssa](https://www.linkedin.com/in/alyssa-ting-47a6b6215/):** a rising second-year Duke student from São Paulo, Brazil. She is interested in studying both Computer Science and Statistical Sciences and hopes to work in Data Science in the future.
 
-**Susan:** 
+**[Susan](https://www.linkedin.com/in/susan-feng-494989214/):** a rising sophomore at Duke from the Bay Area, California. She is interested in studying Computer Science and Finance and is excited to explore various paths in CS.
 
-**Joey:**
+**[Joey](https://www.linkedin.com/in/howard-nolan/):** a rising Junior at Duke from Austin, Texas majoring in Computer Science and Economics. He is interested in using the application of data to solve tangible problems
 
 ## Project Introduction 
 This project was a part of the 2022 Duke University Code+ Program, a 10-week summer program designed for Duke University undergraduate students. The primary goal of this specific project, called Visualizations in Python, was to use state-of-the-art tools to develop interactive visualizations and workflows that would allow Duke researchers to analyze and visualize their large datasets in new and enhanced ways. The visualizations developed and documented for this project were created in JupyterLab notebooks hosted in a custom singularity. This singularity was then deployed on Duke’s OnDemand website, a virtual SLURM-based job scheduler using machines provided by the Duke Compute Cluster, in order to allow for a heavier use of computational resources.
@@ -28,7 +28,7 @@ This dataset was collected by Celine, and contains nearly 100 thousand observati
 #### InfoUSA Dataset
 This dataset was purchased by Duke University, and contains household-level census data separated by household, totalling 200 million observations across around 38 thousand different files. For each household it has data on, this dataset contains information on the number of children, age code, estimated income, latitude and longitude coordinates, and more. The work we have done focuses primarily on the number of children per household and the head of household’s age code, as well as each household’s latitude and longitude coordinates. This dataset is private, but we’ve provided a synthetic version of the data below:
 
-[INSERT SYNTHETIC DATA]
+![Example](/images/synthetic_infousa.png)
 
 #### National Risk Index Data, available [here](https://hazards.fema.gov/nri/data-resources).
 This dataset was made publicly available by the Federal Emergency Management Agency (FEMA), and contains extensive information on natural hazards risks for each county across the country. The columns we were specifically interested in were the ones with Risk Index Score values for each county. The Risk Index Score is on a scale from 0 to 100, and was calculated by FEMA and indicates the relative risk of that county for a specific natural hazard. The natural hazards deemed relevant to our project by our researcher were tornadoes, hurricanes, strong winds, coastal floods, riverine floods, and earthquakes.

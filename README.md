@@ -28,7 +28,7 @@ This dataset was collected by Celine, and contains nearly 100 thousand observati
 #### InfoUSA Dataset
 This dataset was purchased by Duke University, and contains household-level census data separated by household, totalling 200 million observations across around 38 thousand different files. For each household it has data on, this dataset contains information on the number of children, age code, estimated income, latitude and longitude coordinates, and more. The work we have done focuses primarily on the number of children per household and the head of household’s age code, as well as each household’s latitude and longitude coordinates. This dataset is private, but we’ve provided a synthetic version of the data below:
 
-[INSERT SYNTHETIC DATA]
+![Example](/images/synthetic_infousa.png)
 
 #### National Risk Index Data, available [here](https://hazards.fema.gov/nri/data-resources).
 This dataset was made publicly available by the Federal Emergency Management Agency (FEMA), and contains extensive information on natural hazards risks for each county across the country. The columns we were specifically interested in were the ones with Risk Index Score values for each county. The Risk Index Score is on a scale from 0 to 100, and was calculated by FEMA and indicates the relative risk of that county for a specific natural hazard. The natural hazards deemed relevant to our project by our researcher were tornadoes, hurricanes, strong winds, coastal floods, riverine floods, and earthquakes.
