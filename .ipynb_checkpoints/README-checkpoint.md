@@ -18,7 +18,7 @@ This project was a part of the 2022 Duke University Code+ Program, a 10-week sum
 The researcher we worked with is Celine Robinson, pursuing a Ph.D in Civil and Environmental Engineering concentrating in Systems, Risk, and Decision. The research we focused on while working with her pertains specifically to the risk of above-ground petrochemical storage tanks spilling, and the potential effects of these spills on the communities nearby. She is specifically interested in understanding these impacts on communities dense with children or eldery people, a focus which guided our work. 
 
 ### About the Data
-This project works primarily with two datasets: the Above-Ground Storage Tanks (AST) dataset and the InfoUSA dataset, both provided to us by our researcher. In addition, we pulled government-owned natural hazard data to supplement our work. 
+This project works primarily with two datasets: the Above-Ground Storage Tanks (AST) dataset and the InfoUSA dataset, both provided to us by our researcher. In addition, we pulled government-owned natural hazard data to supplement our work. The AST and InfoUSA datasets are both private and we cannot publish them publicly. Therefore, throughout this repository, we will be using synthetic data. To learn more about how we created this synthetic data, view our data processing README, linked [here](https://gitlab.oit.duke.edu/at341/codeplus-celine-dcc-package/-/tree/master/processing/README.md).
 
 #### AST Dataset
 This dataset was collected by Celine, and contains nearly 100 thousand observations on petrochemical storage tanks across the United States. The data includes information such as the type of storage tank, diameter, and precise latitude and longitude coordinates for each storage tank. The full dataset is not available to the public, but we’ve provided a random sampling of it below: 
@@ -127,7 +127,22 @@ This interactive Web App uses the data processing workflows explained in detail 
 
 ## User Instructions
 ### Step 1: Setup environment for project in the Duke Compute Cluster
-Create a JupyterLab Singularity instance in an OnDemand session with or without GPUs and the amount of time, CPU cores (max is 40 cores), and RAM (max is 208 GB), depending on which visualizations you want to run. Only visualizations that require GPUs (such as our Worldwide Reddit Post Activity visualization) will need gpu-scavenger or gpu-common as the partition. Make sure to ask for GPUs (max of 2) if you want to run a GPU visualization.
+Create a JupyterLab Singularity instance in an OnDemand session with or without GPUs and the amount of time, CPU cores (max is 40 cores), and RAM (max is 208 GB), depending on which visualizations you want to run. Only visualizations that require GPUs (such as our Charleston and Harris County Case Studies visualizations) will need ```gpu-scavenger``` or ```gpu-common``` as the partition. Make sure to ask for GPUs (max of 2) if you want to run a GPU visualization.
+
+**If using a different compute system:** You will need to build a singularity like the one we used for this project. The one we used is linked [here](https://gitlab.oit.duke.edu/OIT-DCC/codeplus/-/tree/main/). A non-exhaustive list of packages we used:
+* pyarrow
+* pandas and geopandas
+* matplotlib
+* scikit-learn
+* datashador
+* dask and dask-geopandas
+* holoviews and geoviews
+* cartopy
+* shapely
+* descartes
+* haversine
+* pygeos
+* plotly
 
 ### Step 2: Clone Gitlab repository
 Copy the following command into your terminal once you are inside the directory you want this project folder to be in:

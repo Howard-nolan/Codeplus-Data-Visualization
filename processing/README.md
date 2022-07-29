@@ -5,6 +5,19 @@
 ## Data Cleaning and Processing
 <img src="/images/flowchart.png" alt="flowchart" width="500"/>
 
+### Creating synthetic data
+
+As discussed in the general README, linked [here](https://gitlab.oit.duke.edu/at341/codeplus-celine-dcc-package/-/tree/master/README.md), the AST and InfoUSA datasets we used are not available to the public. Therefore, we've created synthetic data formatted in the exact same way as these two datasets so that this repository can run with test data. 
+
+**Creating AST Data:** Our researcher allowed us to randomly sample 1% of her AST dataset. We use the random library's ```.sample()``` to randomly pull 1% of the data and saved that in the ```data``` folder in this repository for anyone to access.
+
+**Creating InfoUSA Data:** We generated all random numbers for this dataset. However, we kept the original column names and used plausible value ranges to generate random values for each column. Since the original InfoUSA dataset has information on each household's latitude and longitude coordinates, we needed to randomly generate coordinates within the US. Our first approach to this was by restricting the latitude and longitude so that the points were generally in the area of the US. However, as seen below, this resulted in lots of points being generated outside of the US, which gave an inaccurate perspective on what our visualizations should output. Therefore, we adjusted our approach so that each coordinate generated was accurately restricted to be within the US, which gave us the result in the second image. This, however, takes a significantly longer runtime- because for each coordinate generated, we must check to see if it is within the US. It took around 25 minutes to generate 75,000 points. 
+
+**Note:** It is important to note that the InfoUSA data has around 126 million observations across its thousands of files, and so this synthetic data is just a small example of it. We are also only using 1% of the AST data- so not all the visualizations will appear or 'behave' exactly like the ones shown on the general README, which were made with the original datasets. For example, since there are only around 1,000 tanks in our synthetic data, the distances between each household and the tank nearest to it will be much larger than what we would find using the original data. As you increase the number of points generated in the synthetic data, the data should begin to mimic the original InfoUSA data and the visualizations will become closer to the ones outputted by the original datasets. 
+
+![Example]('/images/synthetic_original.png')
+![Example]('/images/synthetic_fixed.png')
+
 ### File Merging: merging thousands of ```.txt``` files and writing the merged file as a ```.parquet``` file
 The InfoUSA dataset has household-level census data for 15 years, 2006 to 2020. Our work uses only the 2020 data. The 2020 data alone contains 38,248 ```.txt``` files, each file representing the census data per each household in one zip code. However, in order to analyze and visualize this data meaningfully, we used the ```pyarrow``` engine and the ```.parquet``` file format in order to combine and store all this data in one, merged ```.parquet``` file.  
 
