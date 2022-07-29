@@ -7,7 +7,7 @@
 
 ### Creating synthetic data
 
-As discussed in the general README, linked [here](https://gitlab.oit.duke.edu/at341/codeplus-celine-dcc-package/-/tree/master/README.md), the AST and InfoUSA datasets we used are not available to the public. Therefore, we've created synthetic data formatted in the exact same way as these two datasets so that this repository can run with test data. 
+As discussed in the general README, linked [here](https://gitlab.oit.duke.edu/at341/codeplus-celine-dcc-package/-/tree/master/README.md), the AST and InfoUSA datasets we used are not available to the public. Therefore, we've created synthetic data formatted in the exact same way as these two datasets so that this repository can run with test data. The gifs included in this README are the what each visualization looks like using the synthetic data created in this repository.
 
 **Creating AST Data:** Our researcher allowed us to randomly sample 1% of her AST dataset. We use the random library's ```.sample()``` to randomly pull 1% of the data and saved that in the ```data``` folder in this repository for anyone to access.
 
