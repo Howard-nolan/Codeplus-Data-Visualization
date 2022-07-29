@@ -127,7 +127,22 @@ This interactive Web App uses the data processing workflows explained in detail 
 
 ## User Instructions
 ### Step 1: Setup environment for project in the Duke Compute Cluster
-Create a JupyterLab Singularity instance in an OnDemand session with or without GPUs and the amount of time, CPU cores (max is 40 cores), and RAM (max is 208 GB), depending on which visualizations you want to run. Only visualizations that require GPUs (such as our Worldwide Reddit Post Activity visualization) will need gpu-scavenger or gpu-common as the partition. Make sure to ask for GPUs (max of 2) if you want to run a GPU visualization.
+Create a JupyterLab Singularity instance in an OnDemand session with or without GPUs and the amount of time, CPU cores (max is 40 cores), and RAM (max is 208 GB), depending on which visualizations you want to run. Only visualizations that require GPUs (such as our Charleston and Harris County Case Studies visualizations) will need ```gpu-scavenger``` or ```gpu-common``` as the partition. Make sure to ask for GPUs (max of 2) if you want to run a GPU visualization.
+
+**If using a different compute system:** You will need to build a singularity like the one we used for this project. The one we used is linked [here](https://gitlab.oit.duke.edu/OIT-DCC/codeplus/-/tree/main/). A non-exhaustive list of packages we used:
+* pyarrow
+* pandas and geopandas
+* matplotlib
+* scikit-learn
+* datashador
+* dask and dask-geopandas
+* holoviews and geoviews
+* cartopy
+* shapely
+* descartes
+* haversine
+* pygeos
+* plotly
 
 ### Step 2: Clone Gitlab repository
 Copy the following command into your terminal once you are inside the directory you want this project folder to be in:
