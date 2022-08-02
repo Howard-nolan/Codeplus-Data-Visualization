@@ -4,7 +4,7 @@
 
 ## Visualizations
 
-**Note:** In this notebook, we are using synthetic InfoUSA and AST data, as described in the general README linked [here](https://gitlab.oit.duke.edu/at341/codeplus-celine-dcc-package/-/tree/master/README.md). So, the visualizations will look different than the ones presented in the README. If all the notebooks in this repository are run like they are presented here, the results for each visualization should appear like the gifs below. To get the same visualizations as presented in the general README, obtain the original InfoUSA and AST data.
+**Note:** In this notebook, we are using synthetic InfoUSA and AST data, as described in the general README linked [here](https://gitlab.oit.duke.edu/at341/codeplus-celine-dcc-package/-/tree/master/README.md). So, the visualizations will look different than the ones presented in the README. If all the notebooks in this repository are run like they are presented here, the results for each visualization should appear like the gifs below. To get the same visualizations as presented in the general README, obtain the original InfoUSA and AST data. 
 
 ### Stacked Bar Graph of Tank Types per State (HoloViews): using Pandas ```.groupby()```, ```.size()``` and ```.pivot_table()```
 This visualization uses the matplotlib backend in Holoviews to display information from the AST dataset. It outputs a stacked bar graph illustrating the exact breakdown of each tank type per state, as well as the number of tanks in each state. 

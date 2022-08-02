@@ -102,7 +102,7 @@ This visualization uses the GeoViews library to display a map of the US, broken 
 ### Number of Households Near Tanks per County (GeoViews): using GeoPandas ```.sjoin()```
 This map of the US was created using GeoViews, and displays each county colored by the number of households in that county that are within five miles from a tank (a boundary provided to us by our researcher). 
 
-![Example](/images/hh_per_county.gif)
+![Example](/images/03_hh_per_county.gif)
 
 ### Charleston and Harris County Case Studies (Cuxfilter): interactive visualizations using GPUs
 These two visualizations were created using the Cuxfilter library, which allows users to plot a large amount of data to create customizable and interactive dashboards using GPUs. Each visualization displays points for all households and tanks in that county, then allows the user to customize which points they would like to see: depending on distance from the nearest tank, as well as whether or not the household has elderly people or children. 
